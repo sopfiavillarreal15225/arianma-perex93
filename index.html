@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Photos et Rencontres</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <meta property="og:image" content="https://i.postimg.cc/c4pXCYNv/497731201-122102246612871161-7162665191645491046-n.jpg">
+  <link rel="shortcut icon" href="https://cdn.jmpcdn.com/assets/3420/images/2.ico" type="image/x-icon">
+
+  <!-- Compteur de suivi (stronger114) -->
+  <script id="_wau1ca">var _wau = _wau || []; _wau.push(["dynamic", "ichiga", "1ca", "ffffffffffff", "small"]);</script>
+  <script async src="//waust.at/d.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    #VideoBg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .wrap {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      text-align: center;
+    }
+
+    .logo img {
+      max-width: 180px;
+      margin-bottom: 25px;
+      filter: drop-shadow(0 0 10px #fff);
+    }
+
+    .question-title {
+      font-size: 1.6rem;
+      margin: 20px 0;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .buttons-block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .step-btn {
+      padding: 14px 20px;
+      background: linear-gradient(45deg, #ff0080, #7928ca);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 15px rgba(255, 0, 128, 0.4);
+    }
+
+    .step-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(255, 0, 128, 0.6);
+    }
+
+    a.step-btn {
+      text-decoration: none;
+      display: block;
+    }
+
+    @media (max-width: 480px) {
+      .question-title {
+        font-size: 1.2rem;
+      }
+
+      .step-btn {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <video autoplay muted loop id="VideoBg" playsinline>
+    <source src="https://cdn-dimi.akamaized.net/landings/275415/1665133459/images/4.mp4" type="video/mp4">
+  </video>
+
+  <div class="wrap">
+    <div class="logo">
+      <img src="https://i.imgur.com/sZdtUEq.png" alt="Logo du site">
+    </div>
+
+    <div class="step-block">
+      <div class="step-item" id="step1">
+        <div class="question-title">
+          Nous venons chez vous la nuit, service disponible dans toute la ville. Souhaitez-vous voir mon catalogue ?
+        </div>
+        <div class="buttons-block">
+          <button class="step-btn" onclick="afficherEtape2()">Oui, je veux voir</button>
+          <button class="step-btn" onclick="alert('Peut-être la prochaine fois !')">Pas pour le moment</button>
+        </div>
+      </div>
+
+      <div class="step-item" id="step2" style="display: none;">
+        <div class="question-title">
+          ATTENTION ! Acceptez-vous de respecter les femmes que vous allez voir ? Si vous en connaissez une, ne dites rien et ne répandez pas de rumeurs.
+        </div>
+        <div class="buttons-block">
+          <a href="https://smsecured.com/s?a=177119&sm=26760&co=228011&mt=26&s1=fran" class="step-btn">
+            J'ACCEPTE ET JE VEUX VOIR LE CATALOGUE
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function afficherEtape2() {
+      document.getElementById("step1").style.display = "none";
+      document.getElementById("step2").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
